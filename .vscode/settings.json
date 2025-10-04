@@ -1,0 +1,5 @@
+{
+    "python.analysis.aiCodeActions": {},
+    "chat.agent.enabled": true,
+    "github.copilot.chat.experimental.temporalContext.enabled": true
+}
