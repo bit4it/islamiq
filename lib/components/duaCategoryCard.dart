@@ -1,6 +1,7 @@
 // Dua Category Item Component
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:islamiq/theme/app_theme.dart';
 
 
 class DuaCategory extends StatelessWidget {
@@ -33,21 +34,24 @@ class DuaCategory extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  child: SizedBox(
-                    width: 56,
-                    height: 56,
-                    child: Center(
-                      child: Text(
-                        '$index.',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Color.fromRGBO(94, 83, 77, 100),
-                        ),
-                      ),
-                    ),
-                  ),
+            width: 56,
+            height: 56,
+            decoration: BoxDecoration(
+              color: AppTheme.accentGreen.withOpacity(0.3),
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: AppTheme.primaryGreen, width: 1.5),
+            ),
+            child: Center(
+              child: Text(
+                '$index',
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: AppTheme.primaryGreen,
                 ),
+              ),
+            ),
+          ),
                 const SizedBox(width: 16),
                 Expanded(
                   child: Text(
@@ -55,7 +59,7 @@ class DuaCategory extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
-                          color: Color.fromRGBO(94, 83, 77, 100),
+                          color: AppTheme.textDark,
                       
                     ),
                   ),
@@ -68,13 +72,14 @@ class DuaCategory extends StatelessWidget {
                       'assets/icons/utils/book.svg',
                       width: 24,
                       height: 24,
+                      color: AppTheme.cardGreen,
                     ),
                     const SizedBox(height: 4),
                     Text(
                       '$duasCount Duas',
                       style: const TextStyle(
                         fontSize: 13,
-                        color: Color.fromRGBO(94, 83, 77, 100),
+                        color: AppTheme.textDark,
                       ),
                     ),
                   ],

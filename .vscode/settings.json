@@ -1,5 +1,6 @@
 {
     "python.analysis.aiCodeActions": {},
     "chat.agent.enabled": true,
-    "github.copilot.chat.experimental.temporalContext.enabled": true
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "chat.agent.maxRequests": 10000
 }

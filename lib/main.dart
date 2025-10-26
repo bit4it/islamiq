@@ -4,9 +4,14 @@ import 'package:islamiq/screens/dua.dart';
 import 'package:islamiq/screens/dua_details.dart';
 import 'package:islamiq/screens/dualist.dart';
 import 'package:islamiq/screens/home.dart';
+import 'package:islamiq/screens/ilm.dart';
+import 'package:islamiq/screens/masjid_demo.dart';
 import 'package:islamiq/screens/qibla.dart';
+import 'package:islamiq/screens/quran.dart';
+import 'package:islamiq/screens/quran_reader.dart';
 
 void main() {
+  debugDisableShadows = true;
   runApp(const MyApp());
 }
 
@@ -30,9 +35,16 @@ class MyApp extends StatelessWidget {
       home: HomeScreen(),
       routes: {
         '/qibla': (context) => const QiblaCompassScreen(),
+        '/ilm': (context) => IlmScreen(),
         '/dua': (context) =>  DuaScreen(),
         '/dua/list': (context) =>  DuaListScreen(),
         '/dua/details': (context) =>  DuaDetailsScreen(),
+        '/quran': (context) =>  QuranMajeedScreen(),
+        '/quran/reader': (context) =>  QuranMajeedReaderScreen(),
+        '/masjid': (context) =>  MasjidDemoScreen(),
+
+
+
       },
     );
   }

@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:islamiq/api/location.dart';
 import 'package:islamiq/api/services.dart';
 import 'package:islamiq/components/prayercard.dart';
-import 'package:islamiq/components/navbar.dart';
+import 'package:islamiq/components/bottom_navbar.dart';
 import 'package:islamiq/utils.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -111,26 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           translation: 'And your Lord has decreed that you not worship except Him, and to parents....',
                           backgroundColor: const Color(0xFF0D8E6F),
                         ),
-                        
-                      
-                        // Daily Dua Card
-                        // _buildDailyCard(
-                        //   title: 'Daily Dua',
-                        //   surahInfo: 'Surah Al-Isra, (Verse 23)',
-                        //   arabicText: 'وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا ۚ إِمَّا يَبْلُغَنَّ عِندَكَ\nالْكِبَرَ أَحَدُهُمَا أَوْ كِلَاهُمَا فَلَا تَقُل لَّهُمَا أُفٍّ وَلَا...',
-                        //   translation: 'And your Lord has decreed that you not worship except Him, and to parents....',
-                        //   backgroundColor: Colors.white,
-                        // ),
                      
-                        // // Daily Hadith Card
-                        // _buildDailyCard(
-                        //   title: 'Daily Hadith',
-                        //   surahInfo: 'Surah Al-Isra, (Verse 23)',
-                        //   arabicText: 'وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا ۚ إِمَّا يَبْلُغَنَّ عِندَكَ\nالْكِبَرَ أَحَدُهُمَا أَوْ كِلَاهُمَا فَلَا تَقُل لَّهُمَا أُفٍّ وَلَا...',
-                        //   translation: 'And your Lord has decreed that you not worship except Him, and to parents....',
-                        //   backgroundColor: Colors.white,
-                        // ),
-                        
                         const SizedBox(height: 20),
                       ],
                     ),
@@ -150,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       ),
-      bottomNavigationBar: buildBottomNavBar(),
+      bottomNavigationBar: BottomNavBar(currentIndex: 0),
     );
   }
   }

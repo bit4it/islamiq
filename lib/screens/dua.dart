@@ -3,6 +3,7 @@ import 'package:islamiq/api/dua.dart';
 import 'package:islamiq/components/appbar.dart';
 import 'package:islamiq/components/duaCategoryCard.dart';
 import 'package:islamiq/components/searchBar.dart';
+import 'package:islamiq/theme/app_theme.dart';
 
 
 
@@ -16,11 +17,12 @@ class DuaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(251, 248, 247, 100),
+      backgroundColor: AppTheme.backgroundLight,
       body: Column(
         children: [
+          const SizedBox(height: 10),
           const GenericAppBar(title: "Dua", iconPath: "assets/icons/utils/translator.svg", onIconPressed: null),
-          const SizedBox(height: 16),
+        
           const GenericSearchBar(placeholderText: "Search Dua",),
           const SizedBox(height: 16),
           const CategoryTabs(),
@@ -68,8 +70,9 @@ class _CategoryTabsState extends State<CategoryTabs> {
         height: 56,
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: const Color(0xFFE8E0DD),
+          color: AppTheme.cardGreenLight,
           borderRadius: BorderRadius.circular(12),
+          border: BoxBorder.all(color: AppTheme.primaryGreen, width: 1.5),
         ),
         child: Row(
             children: [
@@ -84,8 +87,9 @@ class _CategoryTabsState extends State<CategoryTabs> {
                 padding: const EdgeInsets.all(8), // Added padding
                 decoration: BoxDecoration(
                 color: isCategoriesSelected
-                  ? const Color(0xFFB8998C)
-                  : Colors.transparent,
+                  ? AppTheme.primaryGreen
+                  
+                  : const Color.fromARGB(0, 167, 25, 25),
                 borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
@@ -95,7 +99,7 @@ class _CategoryTabsState extends State<CategoryTabs> {
                   Icons.menu,
                   color: isCategoriesSelected
                     ? Colors.white
-                    : const Color(0xFF757575),
+                    : AppTheme.textDark,
                   size: 24,
                   ),
                   const SizedBox(width: 12),
@@ -106,7 +110,8 @@ class _CategoryTabsState extends State<CategoryTabs> {
                     fontWeight: FontWeight.w500,
                     color: isCategoriesSelected
                       ? Colors.white
-                      : const Color(0xFF757575),
+                    : AppTheme.textDark,
+                     
                   ),
                   ),
                 ],
@@ -125,7 +130,7 @@ class _CategoryTabsState extends State<CategoryTabs> {
                 padding: const EdgeInsets.all(8), // Added padding
                 decoration: BoxDecoration(
                 color: !isCategoriesSelected
-                  ? const Color(0xFFB8998C)
+                  ? AppTheme.primaryGreen
                   : Colors.transparent,
                 borderRadius: BorderRadius.circular(12),
                 ),
@@ -136,7 +141,7 @@ class _CategoryTabsState extends State<CategoryTabs> {
                   Icons.bookmark_border,
                   color: !isCategoriesSelected
                     ? Colors.white
-                    : const Color(0xFF757575),
+                    : AppTheme.textDark,
                   size: 24,
                   ),
                   const SizedBox(width: 12),
@@ -147,7 +152,7 @@ class _CategoryTabsState extends State<CategoryTabs> {
                     fontWeight: FontWeight.w500,
                     color: !isCategoriesSelected
                       ? Colors.white
-                      : const Color(0xFF757575),
+                      : AppTheme.textDark,
                   ),
                   ),
                 ],

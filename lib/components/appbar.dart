@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:islamiq/theme/app_theme.dart';
 
 class DuaAppBar extends StatelessWidget {
   const DuaAppBar({Key? key}) : super(key: key);
@@ -9,11 +10,11 @@ class DuaAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 16, right: 16, top: 48, bottom: 16),
-      color: Colors.white,
+      color: AppTheme.backgroundWhite,
       child: Row(
         children: [
           IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black87, size: 24),
+            icon: const Icon(Icons.arrow_back, color: AppTheme.primaryGreen, size: 24),
             onPressed: () {},
             padding: EdgeInsets.zero,
             constraints: const BoxConstraints(),
@@ -25,7 +26,7 @@ class DuaAppBar extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
-                  color: Colors.black87,
+                  color: AppTheme.textDark,
                 ),
               ),
             ),
@@ -34,7 +35,7 @@ class DuaAppBar extends StatelessWidget {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: const Color(0xFFB8998C),
+              color: AppTheme.primaryGreen,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Stack(
@@ -52,7 +53,7 @@ class DuaAppBar extends StatelessWidget {
                     ),
                     child: const Icon(
                       Icons.swap_horiz,
-                      color: Color(0xFFB8998C),
+                      color: AppTheme.primaryGreen,
                       size: 12,
                     ),
                   ),
@@ -68,7 +69,7 @@ class DuaAppBar extends StatelessWidget {
 
 class GenericAppBar extends StatelessWidget {
   final String title;
-  final String iconPath;
+  final String? iconPath;
   final VoidCallback? onIconPressed;
 
   const GenericAppBar({
@@ -81,12 +82,12 @@ class GenericAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 16, right: 16, top: 48, bottom: 16),
-      color: const Color.fromRGBO(251, 248, 247, 100),
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 30, bottom: 16),
+      color: AppTheme.backgroundLight,
       child: Row(
         children: [
           IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black87, size: 24),
+            icon: const Icon(Icons.arrow_back, color: AppTheme.textDark, size: 24),
             onPressed: () {
               Navigator.of(context).pop();
             },
@@ -100,7 +101,7 @@ class GenericAppBar extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
-                  color: Color.fromRGBO(89, 79, 74, 100),
+                  color: AppTheme.textDark,
                 ),
               ),
             ),
@@ -115,8 +116,8 @@ class GenericAppBar extends StatelessWidget {
               ),
               child: Center(
                 child: SvgPicture.asset(
-                  iconPath,
-                
+                  iconPath ?? '',
+                  color: AppTheme.primaryGreen,
                   width: 25,
                   height: 25,
                 ),

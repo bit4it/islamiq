@@ -5,8 +5,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 Widget buildQuickActionCard(BuildContext context, String title, String iconName) {
   return GestureDetector(
     onTap: () {
-      // Handle button press
-      Navigator.pushNamed(context, '/$iconName');
+      // Handle button press - map mosque icon to masjid route
+      String route = iconName == 'mosque' ? 'masjid' : iconName;
+      Navigator.pushNamed(context, '/$route');
     },
     child: Container(
       padding: const EdgeInsets.all(16),

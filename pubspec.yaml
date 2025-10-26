@@ -35,9 +35,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   http: ^1.2.2
+  dio: ^5.3.2
   geolocator: ^9.0.2
   shared_preferences: ^2.1.0
   flutter_compass: ^0.7.0
+  arabic_font: ^0.0.9
+  
 
 
 dev_dependencies:
@@ -83,8 +86,25 @@ flutter:
     - assets/icons/features/qibla.svg
     - assets/icons/utils/translator.svg
     - assets/icons/utils/book.svg
+    - assets/icons/utils/star.svg
+    - assets/icons/utils/more.svg
+    - assets/icons/utils/quran-book.svg
+    - assets/icons/quran/bismillah.svg
     - assets/images/qibla.svg
     - assets/icons/icon.png
+    - assets/icons/ilm/kalimah.svg
+    - assets/icons/ilm/allah-names.svg
+    - assets/icons/ilm/aytul-kursi.svg
+    - assets/icons/ilm/wudhu.svg
+    - assets/icons/ilm/prayer.svg
+    - assets/icons/ilm/fasting.svg
+    - assets/icons/ilm/hajj.svg
+    - assets/icons/ilm/zakat.svg
+    - assets/icons/ilm/shahada.svg
+    - assets/icons/ilm/salah.svg
+
+    
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -105,6 +125,20 @@ flutter:
         - asset: assets/fonts/Kufam-Italic.ttf
           weight: 700
 
+    - family: Uthmani
+      fonts:
+        - asset: assets/fonts/uthmani.ttf
+          weight: 400
+
+    - family: UthmanTN
+      fonts:
+        - asset: assets/fonts/UthmanTNB_v2-0.ttf
+          weight: 400
+
+    - family: KFGQPC
+      fonts:
+        - asset: assets/fonts/KFGQPC-KufiStyV14.ttf
+          weight: 400
 
   #
   # For details regarding fonts from package dependencies,

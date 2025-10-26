@@ -3,6 +3,7 @@ import 'package:islamiq/api/dua.dart';
 import 'package:islamiq/components/appbar.dart';
 import 'package:islamiq/components/duaCategoryCard.dart';
 import 'package:islamiq/components/searchBar.dart';
+import 'package:islamiq/theme/app_theme.dart';
 
 
 class DuaListScreen extends StatelessWidget {
@@ -16,8 +17,9 @@ class DuaListScreen extends StatelessWidget {
       backgroundColor:Color.fromRGBO(251, 248, 247, 100),
       body: Column(
         children: [
+          const SizedBox(height: 10),
           const GenericAppBar(title: "Fardhu", iconPath: "assets/icons/utils/translator.svg", onIconPressed: null),
-          const SizedBox(height: 16),
+  
           const GenericSearchBar(placeholderText: "Search Dua",),
           const SizedBox(height: 16),
      
@@ -77,11 +79,7 @@ class GarmentListItem extends StatelessWidget {
     return 
     Container(
       margin: const EdgeInsets.only(bottom: 0), // No margin for elevation effect
-      decoration: BoxDecoration(
-        color: Color.fromRGBO(251, 248, 247, 100),
-        borderRadius: BorderRadius.vertical(top: Radius.circular(0)), // Apply radius only to the top
-      
-      ),
+     
       child: Column(
         children: [
           Material(
@@ -135,7 +133,7 @@ class ItemNumber extends StatelessWidget {
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w600,
-        color:  Color.fromRGBO(94, 83, 77, 100),
+        color:  AppTheme.primaryGreen,
       ),
     );
   }
@@ -157,7 +155,7 @@ class ItemTitle extends StatelessWidget {
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w400,
-        color:  Color.fromRGBO(94, 83, 77, 100),
+        color:  AppTheme.textDark,
       ),
     );
   }
@@ -171,7 +169,7 @@ class ItemArrow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Icon(
       Icons.chevron_right,
-      color:  Color.fromRGBO(94, 83, 77, 100),
+      color:  AppTheme.primaryGreen,
       size: 24,
     );
   }

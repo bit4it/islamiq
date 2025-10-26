@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamiq/components/appbar.dart';
+import 'package:islamiq/theme/app_theme.dart';
 
 
 // Main Detail Page
@@ -12,6 +13,7 @@ class DuaDetailsScreen extends StatelessWidget {
         backgroundColor: Color.fromRGBO(251, 248, 247, 100),
         body: Column(
           children: [
+            const SizedBox(height: 10),
             const GenericAppBar(title: 'When walking up', iconPath: 'assets/icons/utils/translator.svg', onIconPressed: null,),
             Expanded(
               child: SingleChildScrollView(
@@ -77,7 +79,7 @@ class ArabicText extends StatelessWidget {
         fontSize: 28,
         height: 2.2,
         fontWeight: FontWeight.w400,
-        color: Color(0xFF8B7E6D),
+        color: AppTheme.primaryGreen,
         fontFamily: 'Traditional Arabic',
       ),
     );
@@ -101,7 +103,7 @@ class TransliterationText extends StatelessWidget {
         fontSize: 16,
         height: 1.6,
         fontWeight: FontWeight.w400,
-        color: Color(0xFF9B8F7E),
+        color: AppTheme.textDark,
         letterSpacing: 0.2,
       ),
     );
@@ -125,7 +127,7 @@ class TranslationText extends StatelessWidget {
         fontSize: 16,
         height: 1.6,
         fontWeight: FontWeight.w400,
-        color: Color(0xFF4A4A4A),
+        color: AppTheme.textMedium,
         letterSpacing: 0.2,
       ),
     );
@@ -153,7 +155,7 @@ class ReferenceText extends StatelessWidget {
           style: const TextStyle(
             fontSize: 14,
             fontStyle: FontStyle.italic,
-            color: Color(0xFF9B8F7E),
+            color: AppTheme.primaryGreen,
             height: 1.5,
           ),
         ),
@@ -163,7 +165,8 @@ class ReferenceText extends StatelessWidget {
           style: const TextStyle(
             fontSize: 14,
             fontStyle: FontStyle.italic,
-            color: Color(0xFF9B8F7E),
+                        color: AppTheme.primaryGreen,
+
             height: 1.5,
           ),
         ),
@@ -222,7 +225,7 @@ class ActionButton extends StatelessWidget {
           children: [
             Icon(
               icon,
-              color: const Color(0xFF6B6B6B),
+              color: AppTheme.primaryGreen,
               size: 22,
             ),
             const SizedBox(width: 8),
@@ -231,7 +234,7 @@ class ActionButton extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
-                color: Color(0xFF6B6B6B),
+                color: AppTheme.textDark,
               ),
             ),
           ],
